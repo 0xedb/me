@@ -1,0 +1,16 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:theBashShell/me.git",
+  "author": "theBashShell <edohbruno@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.1.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
