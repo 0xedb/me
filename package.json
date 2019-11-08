@@ -6,7 +6,8 @@
   "author": "theBashShell <edohbruno@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build"
   },
   "dependencies": {
     "bulma": "^0.8.0",
