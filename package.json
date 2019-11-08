@@ -11,10 +11,13 @@
     "now-build": "next build"
   },
   "dependencies": {
+    "@types/react-helmet": "^5.0.14",
+    "@zeit/next-css": "^1.0.1",
     "bulma": "^0.8.0",
     "next": "^9.1.2",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.6",
