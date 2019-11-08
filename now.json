@@ -1,4 +1,5 @@
 {
     "name": "theBashShell",
-    "version": 2
+    "version": 2,
+    "target": "serverless"
 }
