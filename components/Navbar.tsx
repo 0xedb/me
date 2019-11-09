@@ -1,34 +1,36 @@
-import Link from 'next/link';
+import {useState} from 'react';
+import NavItem from './NavItem';
 
 function Navbar() {
+  const [active, setActive] = useState(false);
+  const burger = `navbar-burger ${active ? 'is-active' : ''}`;
+  const menu = `navbar-menu ${active ? 'is-active' : ''}`;
+
+  const handleBurgerClick = () => {
+    setActive(!active);
+  };
+
   return (
-    <nav className="navbar is-transparent">
-      <div className="navbar-brand">
-        <div className="navbar-item">
-          <Link href="/">theBashShell</Link>
-        </div>
+    <nav className="min uk-navbar-container uk-navbar">
+      <div className="uk-navbar-left">
+        <a className="uk-navbar-toggle" uk-navbar-toggle-icon href="#"></a>
       </div>
-      <a
-        role="button"
-        className="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-      <div className="navbar-menu">
-        <div className="navbar-end">
-          <a className="navbar-item">About</a>
-          <a className="navbar-item">Work</a>
-          <a className="navbar-item">Contact</a>
-          <a className="navbar-item">What's Up</a>
-          <a className="navbar-item">Blog</a>
-        </div>
+      <div className="uk-navbar-center">
+        <ul className="uk-breadcrumb">
+          <NavItem name="about" />
+          <NavItem name="work" />
+          <NavItem name="fun" />
+          <NavItem name="blog" />
+        </ul>
       </div>
     </nav>
   );
 }
 
 export default Navbar;
+
+// <div className={menu}>
+//         <div className="navbar-end">
+
+//         </div>
+//       </div>

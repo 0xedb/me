@@ -1,6 +1,5 @@
-import {Helmet} from 'react-helmet';
-import 'bulma/css/bulma.min.css';
-
+import {Helmet} from 'react-helmet'; 
+import 'uikit/dist/css/uikit.min.css'
 interface Props {
   title?: string;
 }
