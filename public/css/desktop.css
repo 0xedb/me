@@ -2,6 +2,13 @@
 
 @media (min-width: 700px) {
   .me-img {
+    /* max-height: 700px; */
+  }
+
+  #me {
     bottom: -332px;
+    transform: scale(1.5);
+    object-position: center;
+    object-fit: contain;
   }
 }

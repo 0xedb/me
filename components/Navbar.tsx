@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="min uk-navbar-container uk-navbar">
+    <nav className="min uk-navbar-container uk-navbar uk-navbar-transparent">
       <div className="uk-navbar-left">
         <a className="uk-navbar-toggle uk-navbar-toggle-icon"  href="#"></a>
       </div>
