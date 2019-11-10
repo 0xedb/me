@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <nav className="min uk-navbar-container uk-navbar">
       <div className="uk-navbar-left">
-        <a className="uk-navbar-toggle" uk-navbar-toggle-icon href="#"></a>
+        <a className="uk-navbar-toggle uk-navbar-toggle-icon"  href="#"></a>
       </div>
       <div className="uk-navbar-center">
         <ul className="uk-breadcrumb">

@@ -1,5 +1,5 @@
 .page {
-  height: 100vh; 
+  height: 100vh;
   min-height: 300px;
   background: linear-gradient(
     to left bottom,
@@ -35,4 +35,22 @@ navbar-item:focus {
   width: 100%;
   position: absolute;
   bottom: -198px;
+} 
+
+.transition-page {
+  opacity: 1;
+  transition: 2s;
+  /* transform: translateX(0);
+  transform-origin: left; */
 }
+
+html.is-animating .transition-page {
+  opacity: 0;
+  background-color: #e2e621;
+  /* transform: translateX(100%); */
+}
+
+/* html.is-leaving .transition-page {
+  opacity: 0;
+  transform: translateX(0);
+} */

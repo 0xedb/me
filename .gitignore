@@ -4,3 +4,4 @@ dist
 next-env.d.ts
 resources
 .*/
+*.log
