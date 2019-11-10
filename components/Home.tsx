@@ -1,7 +1,7 @@
 function Home() {
   return (
     <div className="home">
-    <div></div>
+    <div className="me-info"></div>
       <div className="me-img centered">
         <picture>
           <source srcSet="/images/bruno0.png" media="(min-width: 700px)" />
