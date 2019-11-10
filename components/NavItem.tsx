@@ -3,16 +3,16 @@ import {changePage} from '../util/actions';
 
 interface Props {
   name: string;
-  children?: JSX.Element;
+  icon?: JSX.Element;
 }
 
-function NavItem({name}: Props) {
+function NavItem({name, icon}: Props) {
   const handleItemClick = () => {
     store.dispatch(changePage(name));
   };
   return (
     <li key={name} className="navbar-item" onClick={handleItemClick}>
-      <a href="#">{name}</a>
+      <a href="#">{icon ? icon : name}</a>
     </li>
   );
 }

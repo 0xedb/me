@@ -13,6 +13,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "animate.css": "^3.7.2",
+    "gsap": "^3.0.0",
     "next": "^9.1.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -22,6 +23,8 @@
     "uikit": "^3.2.3"
   },
   "devDependencies": {
+    "@iconify/icons-noto": "^1.0.5",
+    "@iconify/react": "^1.1.1",
     "@types/node": "^12.12.6",
     "@types/react": "^16.9.11",
     "@types/react-helmet": "^5.0.14",

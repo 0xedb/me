@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import NavItem from './NavItem';
+import {Icon, InlineIcon} from '@iconify/react';
+import crossedFingersMediumDarkSkinTone from '@iconify/icons-noto/crossed-fingers-medium-dark-skin-tone';
 
 function Navbar() {
   const [active, setActive] = useState(false);
@@ -12,11 +14,12 @@ function Navbar() {
 
   return (
     <nav className="min uk-navbar-container uk-navbar uk-navbar-transparent">
-      <div className="uk-navbar-left">
-        <a className="uk-navbar-toggle uk-navbar-toggle-icon"  href="#"></a>
-      </div>
       <div className="uk-navbar-center">
         <ul className="uk-breadcrumb">
+          <NavItem
+            name="home"
+            icon={<Icon icon={crossedFingersMediumDarkSkinTone} />}
+          />
           <NavItem name="about" />
           <NavItem name="work" />
           <NavItem name="fun" />

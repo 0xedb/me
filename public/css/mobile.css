@@ -51,3 +51,7 @@ navbar-item:focus {
   transform: scale(1.2);
   bottom: -198px;
 }
+
+.uk-navbar {
+  padding-top: 15px;
+}

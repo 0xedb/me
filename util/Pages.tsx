@@ -10,5 +10,6 @@ Pages.set('work', <Work />);
 Pages.set('home', <Home />);
 Pages.set('blog', <Blog />);
 Pages.set('fun', <Fun />);
+Pages.set('home', <Home />);
 
 export default Pages;
