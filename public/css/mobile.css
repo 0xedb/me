@@ -6,6 +6,10 @@
     rgb(255, 254, 251),
     rgb(233, 231, 231)
   );
+
+  background-image: url('/images/bg_pattern.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 navbar-item {
@@ -36,7 +40,7 @@ navbar-item:focus {
 }
 
 .me-img {
-  width: 100%; 
+  width: 100%;
   position: fixed;
   bottom: 0;
   overflow: hidden;
@@ -46,8 +50,4 @@ navbar-item:focus {
   position: relative;
   transform: scale(1.2);
   bottom: -198px;
-}
-
-.description {
-  position: relative;
 }
