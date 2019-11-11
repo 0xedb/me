@@ -17,8 +17,7 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-redux": "^7.1.3",
-    "redux": "^4.0.4",
-    "uikit": "^3.2.3"
+    "redux": "^4.0.4"
   },
   "devDependencies": {
     "@iconify/icons-noto": "^1.0.5",

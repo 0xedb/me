@@ -11,4 +11,14 @@
     object-position: center;
     object-fit: contain;
   }
+
+  .is-mobile {
+    display: none;
+    visibility: hidden;
+  }
+
+  .is-desktop {
+    display: unset;
+    visibility: unset;
+  }
 }

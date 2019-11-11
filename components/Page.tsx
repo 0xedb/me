@@ -6,7 +6,7 @@ function Page() {
   const [page, setPage] = useState('home');
 
   const getPageComponent = (page: string) => {
-    const component = Pages.get(page); 
+    const component = Pages.get(page);
     return component;
   };
 

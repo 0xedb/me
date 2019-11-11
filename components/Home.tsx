@@ -2,7 +2,7 @@ function Home() {
   return (
     <div className="home">
       <p className="me-info uk-heading-medium uk-text-center">Hi, I'm Bruno</p>
-      <div className="me-img centered">
+      <div className="me-img min centered">
         <picture>
           <source srcSet="/images/bruno0.png" media="(min-width: 700px)" />
           <img
