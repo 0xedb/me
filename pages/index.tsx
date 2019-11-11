@@ -1,22 +1,32 @@
-import {store} from '../util/reducers';
-import {Provider} from 'react-redux';
 import HeadMeta from '../components/HeadMeta';
-import Page from '../components/Page';
 import Navbar from '../components/Navbar';
 
-const Index = () => (
+const style = (
   <>
-    <HeadMeta title="theBashShell | Bruno Edoh" />
-    <Provider store={store}>
-      <div className="page min">
-        <div className="">
-          <Navbar />
-          <Page />
-        </div>
-      </div>
-    </Provider>
+    <style jsx>{`
+      div {
+        height: 100vh;
+      }
+    `}</style>
+
+    <style global jsx>{`
+      .min {
+        min-width: 300px;
+      }
+    `}</style>
   </>
 );
 
+const Index = () => (
+  <>
+    <div>
+      <HeadMeta>
+        <title>Bruno Edoh | theBashShell</title>
+      </HeadMeta>
+      <Navbar />
+    </div>
+    {style}
+  </>
+);
 
 export default Index;

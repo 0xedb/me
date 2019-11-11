@@ -1,45 +1,65 @@
 import {useState} from 'react';
-import NavItem from './NavItem';
-import {Icon, InlineIcon} from '@iconify/react';
-import crossedFingersMediumDarkSkinTone from '@iconify/icons-noto/crossed-fingers-medium-dark-skin-tone';
-import backhandIndexPointingDownMediumDarkSkinTone from '@iconify/icons-noto/backhand-index-pointing-down-medium-dark-skin-tone';
+
+const style = (
+  <style jsx>{`
+    .overlay {
+      position: relative;
+      width: 100vw;
+      height: 0vh;
+      background: #191a1e;
+      z-index: 80;
+      transition: all 0.6s ease 0.1s;
+    }
+
+    .is-active {
+      height: 100vh;
+    }
+
+    nav {
+      z-index: 100;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    nav .brand-logo,
+    nav i {
+      color: black;
+      mix-blend-mode: difference;
+    }
+  `}</style>
+);
 
 function Navbar() {
-  const [active, setActive] = useState(false);
-  const burger = `navbar-burger ${active ? 'is-active' : ''}`;
-  const menu = `navbar-menu ${active ? 'is-active' : ''}`;
+  const [overlay, setOverlay] = useState(false);
 
-  const handleBurgerClick = () => {
-    setActive(!active);
+  const handleMenu = () => {
+    setOverlay(prev => !prev);
   };
 
   return (
-    <nav className="min uk-navbar-container uk-navbar uk-navbar-transparent">
-      <div className="uk-navbar-right is-mobile">
-        <a className="uk-navbar-toggle" uk-navbar-toggle-icon href="#">
-          <Icon icon={backhandIndexPointingDownMediumDarkSkinTone} />
-        </a>
+    <>
+      <div className="navbar-fixed min">
+        <nav>
+          <div className="navbar-wrapper">
+            <a href="#" className="brand-logo left">
+              Bruno
+            </a>
+            <ul className="right">
+              <li>
+                <a href="#">
+                  <i className="material-icons" onClick={handleMenu}>
+                    {overlay ? 'clear' : 'sort'}
+                  </i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div className={`overlay ${overlay ? 'is-active' : ''}`}></div>
       </div>
-      <div className="uk-navbar-center is-desktop">
-        <ul className="uk-breadcrumb">
-          <NavItem
-            name="home"
-            icon={<Icon icon={crossedFingersMediumDarkSkinTone} />}
-          />
-          <NavItem name="about" />
-          <NavItem name="work" />
-          <NavItem name="fun" />
-          <NavItem name="blog" />
-        </ul>
-      </div>
-    </nav>
+      {style}
+    </>
   );
 }
 
 export default Navbar;
-
-// <div className={menu}>
-//         <div className="navbar-end">
-
-//         </div>
-//       </div>
