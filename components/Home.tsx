@@ -23,17 +23,25 @@ const style = (
     }
 
     .social {
-      position: absolute;
-      left: 10px;
+      flex-flow: row wrap;
+    }
+
+    @media (min-width: 700px) {
+      .social {
+        position: absolute;
+        left: 10px;
+        flex-flow: column nowrap;
+      }
     }
 
     .social img {
-      width: 50px;
+      width: 40px;
       transition: all 0.5s ease 0.1s;
+      padding: 3px 0;
     }
 
     .social img:hover {
-      transform: scale(1.2);
+      transform: scale(1.3);
       filter: blur(0.1);
       transition: all 0.5s ease 0.1s;
     }
@@ -48,16 +56,22 @@ function Home() {
           this is nice
           <div className="social centered">
             <a href="https://github.com/theBashShell" target="_blank">
-              <img src="https://img.icons8.com/nolan/64/000000/github.png" />
+              <img src="https://img.icons8.com/windows/32/000000/github.png" />
             </a>
             <a href="https://www.linkedin.com/in/bruno-edoh/" target="_blank">
-              <img src="https://img.icons8.com/nolan/64/000000/linkedin.png" />
+              <img src="https://img.icons8.com/windows/32/000000/linkedin-2.png" />
             </a>
             <a href="https://twitter.com/theBashShell" target="_blank">
-              <img src="https://img.icons8.com/nolan/64/000000/twitter.png" />
+              <img src="https://img.icons8.com/windows/48/000000/twitter.png" />
+            </a>
+            <a
+              href="https://stackoverflow.com/users/6790436/thebashshell"
+              target="_blank"
+            >
+              <img src="https://img.icons8.com/windows/32/000000/stackoverflow.png" />
             </a>
             <a href="https://www.instagram.com/thebashshell/" target="_blank">
-              <img src="https://img.icons8.com/nolan/64/000000/instagram-new.png" />
+              <img src="https://img.icons8.com/windows/48/000000/instagram.png" />
             </a>
           </div>
         </div>
