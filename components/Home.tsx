@@ -36,12 +36,25 @@ const style = (
     .title {
       text-transform: uppercase;
       color: #02020270;
-      font-size: 25px;
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+    }
+
+    .description {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 30px;
+      text-align: center;
+      max-width: 530px;
+    }
+
+    .standout {
+      color: #ff9800;
     }
 
     .verified {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
 
     @media (min-width: 700px) {
@@ -65,16 +78,18 @@ const style = (
 function Home() {
   return (
     <>
-      <div id="home">
-        <div className="intro centered">
-          <h1 className="title">
-            Full Stack Software Engineer
+      <div id="home min">
+        <div className="intro centered min">
+          <h1 className="title min">Full Stack Software Engineer</h1>
+          <div>
             <img
               className="verified"
               src="https://img.icons8.com/color/32/000000/verified-account.png"
             />
-          </h1>
-          <p>adkldafsj</p>
+          </div>
+          <p className="description">
+            I design and develop <span className="standout">wonderful</span> apps
+          </p>
           <div className="social centered">
             <a href="https://github.com/theBashShell" target="_blank">
               <img src="https://img.icons8.com/windows/32/000000/github.png" />

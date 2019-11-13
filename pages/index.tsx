@@ -11,6 +11,9 @@ const style = (
     `}</style>
 
     <style global jsx>{`
+      * {
+        transition: all 0.4s ease 0.1s;
+      }
       .min {
         min-width: 300px;
       }
@@ -21,7 +24,7 @@ const style = (
         justify-content: center;
         align-items: center;
       }
-      
+
       .credit {
         display: none;
         visibility: hidden;
