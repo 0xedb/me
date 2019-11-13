@@ -25,7 +25,7 @@ const style = (
     nav {
       z-index: 100;
       box-shadow: none;
-      background-color: transparent;
+      background-color: #ffff;
     }
 
     .brand-logo {

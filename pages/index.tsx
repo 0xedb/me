@@ -14,6 +14,11 @@ const style = (
       * {
         transition: all 0.4s ease 0.1s;
       }
+
+      html {
+        height: 100vh;
+      }
+
       .min {
         min-width: 300px;
       }

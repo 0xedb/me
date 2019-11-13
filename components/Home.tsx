@@ -4,14 +4,11 @@ const style = (
       position: relative;
       background: rgb(255, 254, 252);
       height: calc(100vh - 56px);
+      top: -10px;
     }
 
     .intro {
-      width: 100%;
-      position: absolute;
-      left: 50%;
-      top: 40%;
-      transform: translate(-50%, -50%);
+      width: 100%; 
       background: rgb(255, 255, 255);
       padding: 20px;
     }
@@ -42,10 +39,10 @@ const style = (
     }
 
     .description {
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 30px;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 33px;
       text-align: center;
-      max-width: 530px;
+      max-width: 560px;
     }
 
     .standout {
@@ -78,7 +75,7 @@ const style = (
 function Home() {
   return (
     <>
-      <div id="home min">
+      <div id="home" className="centered min">
         <div className="intro centered min">
           <h1 className="title min">Full Stack Software Engineer</h1>
           <div>
@@ -88,7 +85,14 @@ function Home() {
             />
           </div>
           <p className="description">
-            I design and develop <span className="standout">wonderful</span> apps
+            I design and develop &nbsp;
+            <span className="standout">
+              wonderful
+              <span>
+                <sup>&#8734; &nbsp;</sup>
+              </span>
+            </span>
+            apps
           </p>
           <div className="social centered">
             <a href="https://github.com/theBashShell" target="_blank">
