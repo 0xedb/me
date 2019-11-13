@@ -1,5 +1,6 @@
-import HeadMeta from '../components/HeadMeta';
-import Navbar from '../components/Navbar';
+import HeadMeta from "../components/HeadMeta";
+import Navbar from "../components/Navbar";
+import Page from "../components/Page";
 
 const style = (
   <>
@@ -13,6 +14,13 @@ const style = (
       .min {
         min-width: 300px;
       }
+
+      .centered {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+      }
     `}</style>
   </>
 );
@@ -24,6 +32,7 @@ const Index = () => (
         <title>Bruno Edoh | theBashShell</title>
       </HeadMeta>
       <Navbar />
+      <Page />
     </div>
     {style}
   </>

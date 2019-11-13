@@ -2,8 +2,9 @@ import {useState} from 'react';
 
 const style = (
   <style jsx>{`
-    * {
+    a {
       transition: all 0.2s ease;
+      font-family: 'Quicksand', sans-serif;
     }
 
     .overlay {
@@ -25,6 +26,14 @@ const style = (
       z-index: 100;
       box-shadow: none;
       background-color: transparent;
+    }
+
+    .brand-logo {
+      opacity: 0.4;
+    }
+
+    .brand-logo.left {
+      left: 30px;
     }
 
     .black_color {
@@ -55,7 +64,7 @@ function Navbar() {
                 overlay ? 'white_color' : 'black_color'
               } left`}
             >
-              Bruno
+              {`<bruno />`}
             </a>
             <ul className="right">
               <li>
