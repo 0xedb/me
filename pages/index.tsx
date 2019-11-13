@@ -21,6 +21,11 @@ const style = (
         justify-content: center;
         align-items: center;
       }
+      
+      .credit {
+        display: none;
+        visibility: hidden;
+      }
     `}</style>
   </>
 );
