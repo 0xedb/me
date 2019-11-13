@@ -47,16 +47,16 @@ function Home() {
         <div className="intro centered">
           this is nice
           <div className="social centered">
-            <a href="#">
+            <a href="https://github.com/theBashShell" target="_blank">
               <img src="https://img.icons8.com/nolan/64/000000/github.png" />
             </a>
-            <a href="#">
-              <img src="https://img.icons8.com/nolan/64/000000/twitter.png" />
-            </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/bruno-edoh/" target="_blank">
               <img src="https://img.icons8.com/nolan/64/000000/linkedin.png" />
             </a>
-            <a href="#">
+            <a href="https://twitter.com/theBashShell" target="_blank">
+              <img src="https://img.icons8.com/nolan/64/000000/twitter.png" />
+            </a>
+            <a href="https://www.instagram.com/thebashshell/" target="_blank">
               <img src="https://img.icons8.com/nolan/64/000000/instagram-new.png" />
             </a>
           </div>
