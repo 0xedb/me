@@ -6,12 +6,6 @@ const style = (
       height: calc(100vh - 56px);
     }
 
-    @media (min-width: 700px) {
-      #home {
-        height: calc(100vh - 64px);
-      }
-    }
-
     .intro {
       width: 100%;
       position: absolute;
@@ -26,24 +20,44 @@ const style = (
       flex-flow: row wrap;
     }
 
-    @media (min-width: 700px) {
-      .social {
-        position: absolute;
-        left: 10px;
-        flex-flow: column nowrap;
-      }
-    }
-
     .social img {
       width: 40px;
       transition: all 0.5s ease 0.1s;
-      padding: 3px 0;
+      padding: 7px 0;
+      padding-top: 18px;
     }
 
     .social img:hover {
       transform: scale(1.3);
-      filter: blur(0.1);
+      filter: grayscale(1);
       transition: all 0.5s ease 0.1s;
+    }
+
+    .title {
+      text-transform: uppercase;
+      color: #02020270;
+      font-size: 25px;
+    }
+
+    .verified {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: 700px) {
+      #home {
+        height: calc(100vh - 64px);
+      }
+
+      .social {
+        position: fixed;
+        left: 10px;
+        flex-flow: column nowrap;
+      }
+
+      .social img {
+        padding-top: 5px;
+      }
     }
   `}</style>
 );
@@ -53,7 +67,14 @@ function Home() {
     <>
       <div id="home">
         <div className="intro centered">
-          this is nice
+          <h1 className="title">
+            Full Stack Software Engineer
+            <img
+              className="verified"
+              src="https://img.icons8.com/color/32/000000/verified-account.png"
+            />
+          </h1>
+          <p>adkldafsj</p>
           <div className="social centered">
             <a href="https://github.com/theBashShell" target="_blank">
               <img src="https://img.icons8.com/windows/32/000000/github.png" />
@@ -80,7 +101,8 @@ function Home() {
 
       <div className="credit">
         <a href="https://icons8.com">
-          GitHub, LinkedIn, Twitter, Instagram icons by Icons8
+          GitHub, LinkedIn, Twitter, Instagram, Stack Overflow, Verified Account
+          icons by Icons8
         </a>
       </div>
     </>
