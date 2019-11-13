@@ -62,7 +62,7 @@ function Navbar() {
               href="#"
               className={`brand-logo ${
                 overlay ? 'white_color' : 'black_color'
-              } left`}
+              } center`}
             >
               {`<bruno />`}
             </a>
