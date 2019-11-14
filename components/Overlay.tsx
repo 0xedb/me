@@ -44,24 +44,47 @@ font-weight: bold;
 
         .aside-info img {
             width: 370px;
-            height: 370px;
             border-radius: 50%;
             mix-blend-mode: darken;
-            background: wheat;
+            background: wheat;  
+            transform-origin: top;
+            height: 0px;  
+            transform: translateY(-100%);
+            transition: all 1s ease-in 1s;         
+        }
+
+        .show { 
+            height: 370px !important;
+            transform: translateY(-32%) !important;
+            
+        }
+
+        .hide { 
+            display:none;
+            visibility: hidden;
+            height: 0px;             
         }
  
     }
  `}</style>
 );
 
-function Overlay() {
+interface Props {
+  show?: boolean;
+}
+
+function Overlay({ show }: Props) {
   return (
     <>
       <div className="overlay-container centered">
         <div className="aside-info">
           <div>
-            <img src="/images/me_alt.png" alt="me" />
-          </div> 
+            <img
+              src="/images/me_alt.png"
+              alt="me"
+              className={`${show ? "show" : "hide"}`}
+            />
+          </div>
         </div>
         <div className="links">
           <ul className="centered link-nav">
