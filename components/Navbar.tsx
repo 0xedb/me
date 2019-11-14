@@ -31,7 +31,7 @@ const style = (
     }
 
     nav ul a:hover {
-      background-color: none;
+      background-color: unset;
     }
 
     .brand-logo {
