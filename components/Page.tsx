@@ -3,6 +3,12 @@ import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 import { store } from "../util/reducers";
 
+const style = (
+  <style>{`
+ 
+`}</style>
+);
+
 function Page() {
   const [page, setPage] = useState("home");
 
@@ -24,6 +30,7 @@ function Page() {
     <>
       <Navbar />
       <section>{getPageComponent(page)}</section>
+      {style}
     </>
   );
 }

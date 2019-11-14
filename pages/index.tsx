@@ -5,13 +5,16 @@ import Page from "../components/Page";
 const style = (
   <>
     <style jsx>{`
-      div {
-        height: 100vh;
+      #thebashshell {
+        height: 100%;
       }
     `}</style>
 
     <style global jsx>{`
-      * {
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
         transition: all 0.4s ease 0.1s;
       }
 
@@ -19,12 +22,11 @@ const style = (
         scroll-behavior: smooth;
       }
 
+      html,
       body {
         height: 100vh;
-      }
-
-      #thebashshell {
-        height: 100%;
+        margin: 0px;
+        padding: 0px;
       }
 
       .min {
@@ -52,7 +54,6 @@ const Index = () => (
       <HeadMeta>
         <title>Bruno Edoh | theBashShell</title>
       </HeadMeta>
-      
       <Page />
     </div>
     {style}

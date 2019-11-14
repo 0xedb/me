@@ -27,6 +27,8 @@ const style = (
       box-shadow: 0 2px 2px 0 #dadada24, 0 3px 1px -2px #efefef1f,
         0 1px 5px 0 #e2e2e233;
       background-color: #ffffff;
+      position: fixed;
+      top: 0px;
     }
 
     nav ul a:hover {
@@ -52,6 +54,18 @@ const style = (
     .white_color {
       color: white !important;
     }
+
+    .material-icons {
+      width: 45px;
+      display: flex !important;
+    }
+
+    @media (min-width: 700px) {
+      .material-icons {
+        width: 50px;
+        height: 64px !important;
+      }
+    }
   `}</style>
 );
 
@@ -64,34 +78,33 @@ function Navbar() {
 
   return (
     <>
-      <div className="navbar-fixed min">
-        <nav className={overlay ? "black_bg" : ""}>
-          <div className="navbar-wrapper">
-            <a
-              href="#"
-              className={`brand-logo ${
-                overlay ? "white_color" : "black_color"
-              } center`}
-            >
-              {`<bruno />`}
+      <nav className={overlay ? "black_bg" : ""}>
+        <div className="navbar-wrapper">
+          <a
+            href="#"
+            className={`brand-logo ${
+              overlay ? "white_color" : "black_color"
+            } center`}
+          >
+            {`<bruno />`}
+          </a>
+          <ul className="right">
+            <a>
+              <div onClick={handleMenu}>
+                <i
+                  className={`material-icons centered ${
+                    overlay ? "white_color" : "black_color"
+                  }`}
+                >
+                  {overlay ? "close" : "sort"}
+                </i>
+              </div>
             </a>
-            <ul className="right">
-              <a>
-                <div onClick={handleMenu}>
-                  <i
-                    className={`material-icons ${
-                      overlay ? "white_color" : "black_color"
-                    }`}
-                  >
-                    {overlay ? "close" : "sort"}
-                  </i>
-                </div>
-              </a>
-            </ul>
-          </div>
-        </nav>
-        <div className={`overlay ${overlay ? "is-active" : ""}`}></div>
-      </div>
+          </ul>
+        </div>
+      </nav>
+      <div className={`overlay centered ${overlay ? "is-active" : ""}`}></div>
+
       {style}
     </>
   );
