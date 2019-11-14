@@ -1,3 +1,5 @@
+import {SyntheticEvent} from 'react';
+
 const style = (
   <style>{`
     .overlay-container {
@@ -12,7 +14,7 @@ const style = (
         top: 15%;
     }
 
-    .link-nav a {
+    .link_nav a {
         font-size: 30px;
         font-family: 'Quicksand', sans-serif;
     }
@@ -74,6 +76,10 @@ interface Props {
 }
 
 function Overlay({show}: Props) {
+  const handleLinkClick = (event: SyntheticEvent) => {
+    console.log(event);
+  };
+
   return (
     <>
       <div className="overlay-container centered">
@@ -86,10 +92,10 @@ function Overlay({show}: Props) {
             />
           </div>
         </div>
-        <div className="links">
-          <ul className="centered link-nav">
+        <div className="links" onClick={handleLinkClick}>
+          <ul className="centered link_nav">
             <li>
-              <a className="enlarge effect" href="#">
+              <a className="effect enlarge" href="#">
                 about
               </a>
             </li>
