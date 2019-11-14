@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Overlay from './Overlay';
 
 const style = (
   <style jsx>{`
@@ -102,7 +103,7 @@ function Navbar() {
             </a>
           </ul>
         </div>
-        <div className={`overlay centered ${overlay ? "is-active" : ""}`}></div>
+        <div className={`overlay centered ${overlay ? "is-active" : ""}`}><Overlay /></div>
       </nav>
       {style}
     </>

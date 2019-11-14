@@ -44,6 +44,16 @@ const style = (
         display: none;
         visibility: hidden;
       }
+
+      .enlarge {
+        transition: all 0.5s ease 0.1s;
+      }
+
+      .enlarge:hover {
+        transform: scale(1.3);
+        filter: grayscale(1);
+        transition: all 0.7s ease 0.1s;
+      }
     `}</style>
   </>
 );
