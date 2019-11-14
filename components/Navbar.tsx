@@ -8,7 +8,7 @@ const style = (
     }
 
     .overlay {
-      position: relative;
+      position: absolute;
       width: 100%;
       height: 0vh;
       background: #191a1e;

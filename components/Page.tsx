@@ -1,9 +1,10 @@
-import Pages from '../util/Pages';
-import {useEffect, useState} from 'react';
-import {store} from '../util/reducers';
+import Pages from "../util/Pages";
+import Navbar from "./Navbar";
+import { useEffect, useState } from "react";
+import { store } from "../util/reducers";
 
 function Page() {
-  const [page, setPage] = useState('home');
+  const [page, setPage] = useState("home");
 
   const getPageComponent = (page: string) => {
     const component = Pages.get(page);
@@ -19,7 +20,12 @@ function Page() {
     };
   });
 
-  return <section>{getPageComponent(page)}</section>;
+  return (
+    <>
+      <Navbar />
+      <section>{getPageComponent(page)}</section>
+    </>
+  );
 }
 
 export default Page;

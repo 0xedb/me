@@ -15,8 +15,16 @@ const style = (
         transition: all 0.4s ease 0.1s;
       }
 
-      html, body {
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
         height: 100vh;
+      }
+
+      #thebashshell {
+        height: 100%;
       }
 
       .min {
@@ -40,11 +48,11 @@ const style = (
 
 const Index = () => (
   <>
-    <div>
+    <div id="thebashshell">
       <HeadMeta>
         <title>Bruno Edoh | theBashShell</title>
       </HeadMeta>
-      <Navbar />
+      
       <Page />
     </div>
     {style}
