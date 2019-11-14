@@ -3,12 +3,13 @@ const style = (
     #home {
       position: relative;
       background: rgb(255, 254, 252);
-      height: calc(100vh - 56px);
+      height: 100%;
       top: -10px;
+      padding-top: 50px;
     }
 
     .intro {
-      width: 100%; 
+      width: 100%;
       background: rgb(255, 255, 255);
       padding: 20px;
     }
@@ -54,19 +55,44 @@ const style = (
       height: 18px;
     }
 
-    @media (min-width: 700px) {
-      #home {
-        height: calc(100vh - 64px);
-      }
+    .myself {
+      width: 100%;
+      height: 440px;
+    }
 
+    .myself_img {
+      object-fit: cover;
+      object-position: center 1%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      background: #292929;
+      width: 100%;
+    }
+
+    @media (min-width: 700px) {
       .social {
         position: fixed;
         left: 10px;
         flex-flow: column nowrap;
+        margin-top: 30px;
       }
 
       .social img {
         padding-top: 5px;
+      }
+
+      .myself {
+        width: 80%;
+        max-width: 750px;
+        height: 600px;
+      }
+
+      .content {
+        width: 80%;
+        max-width: 750px;
       }
     }
   `}</style>
@@ -115,9 +141,23 @@ function Home() {
             </a>
           </div>
         </div>
+        <div className="myself centered">
+          <picture className="myself_img">
+            <source srcSet="/images/myself1.png" media="(min-width: 700px)" />
+            <img
+              className="myself_img"
+              src="/images/myself0.png"
+              alt="bruno edoh"
+            />
+          </picture>
+        </div>
+        <div className="content">
+          Still it was a steady a half-open se the chassis of a broken mirror
+          bent and elongated as they fell.
+          <div>eyyy</div>
+        </div>
       </div>
-      {style}
-
+      {style} 
       <div className="credit">
         <a href="https://icons8.com">
           GitHub, LinkedIn, Twitter, Instagram, Stack Overflow, Verified Account
