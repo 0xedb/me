@@ -5,7 +5,9 @@ import { store } from "../util/reducers";
 
 const style = (
   <style>{`
- 
+ section {
+   padding-top: 70px;
+ }
 `}</style>
 );
 

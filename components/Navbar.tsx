@@ -12,7 +12,7 @@ const style = (
       width: 100%;
       height: 0vh;
       background: #191a1e;
-      z-index: 80;
+      z-index: -20;
       opacity: 0;
       transition: all 0.6s ease 0.1s;
     }
@@ -102,9 +102,8 @@ function Navbar() {
             </a>
           </ul>
         </div>
+        <div className={`overlay centered ${overlay ? "is-active" : ""}`}></div>
       </nav>
-      <div className={`overlay centered ${overlay ? "is-active" : ""}`}></div>
-
       {style}
     </>
   );
