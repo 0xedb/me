@@ -1,10 +1,10 @@
-import {useState} from 'react';
+import { useState } from "react";
 
 const style = (
   <style jsx>{`
     a {
       transition: all 0.2s ease;
-      font-family: 'Quicksand', sans-serif;
+      font-family: "Quicksand", sans-serif;
     }
 
     .overlay {
@@ -24,8 +24,14 @@ const style = (
 
     nav {
       z-index: 100;
-      box-shadow: none;
-      background-color: #f8f8f8;
+      box-shadow: 0 2px 2px 0 #dadada24,
+        0 3px 1px -2px #efefef1f,
+        0 1px 5px 0 #e2e2e233;
+      background-color: #ffffff;
+    }
+
+    nav ul a:hover {
+      background-color: none;
     }
 
     .brand-logo {
@@ -38,6 +44,10 @@ const style = (
 
     .black_color {
       color: black !important;
+    }
+
+    .black_bg {
+      background: #191a1e;
     }
 
     .white_color {
@@ -56,12 +66,12 @@ function Navbar() {
   return (
     <>
       <div className="navbar-fixed min">
-        <nav>
+        <nav className={overlay ? "black_bg" : ""}>
           <div className="navbar-wrapper">
             <a
               href="#"
               className={`brand-logo ${
-                overlay ? 'white_color' : 'black_color'
+                overlay ? "white_color" : "black_color"
               } center`}
             >
               {`<bruno />`}
@@ -71,18 +81,18 @@ function Navbar() {
                 <a href="#">
                   <i
                     className={`material-icons ${
-                      overlay ? 'white_color' : 'black_color'
+                      overlay ? "white_color" : "black_color"
                     }`}
                     onClick={handleMenu}
                   >
-                    {overlay ? 'close' : 'sort'}
+                    {overlay ? "close" : "sort"}
                   </i>
                 </a>
               </li>
             </ul>
           </div>
         </nav>
-        <div className={`overlay ${overlay ? 'is-active' : ''}`}></div>
+        <div className={`overlay ${overlay ? "is-active" : ""}`}></div>
       </div>
       {style}
     </>

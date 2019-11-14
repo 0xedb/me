@@ -64,20 +64,27 @@ const style = (
       object-fit: cover;
       object-position: center 1%;
       width: 100%;
+      max-width: 450px;
       height: 100%;
     }
 
     .content {
       background: #292929;
       width: 100%;
+      color: #f5f5f5;
+      max-width: 450px;
+    }
+
+    .content h2 {
+      font-family: "Quicksand", sans-serif;
     }
 
     @media (min-width: 700px) {
       .social {
         position: fixed;
-        left: 10px;
+        left: 22px;
         flex-flow: column nowrap;
-        margin-top: 30px;
+        margin-top: 50px;
       }
 
       .social img {
@@ -86,13 +93,17 @@ const style = (
 
       .myself {
         width: 80%;
-        max-width: 750px;
-        height: 600px;
+        max-width: 635px;
+        height: 660px;
+      }
+
+      .myself_img {
+        max-width: unset;
       }
 
       .content {
         width: 80%;
-        max-width: 750px;
+        max-width: 635px;
       }
     }
   `}</style>
@@ -152,12 +163,11 @@ function Home() {
           </picture>
         </div>
         <div className="content">
-          Still it was a steady a half-open se the chassis of a broken mirror
-          bent and elongated as they fell.
+          <h2>Can I Help You?</h2>
           <div>eyyy</div>
         </div>
       </div>
-      {style} 
+      {style}
       <div className="credit">
         <a href="https://icons8.com">
           GitHub, LinkedIn, Twitter, Instagram, Stack Overflow, Verified Account
