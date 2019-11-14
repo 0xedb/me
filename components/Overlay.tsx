@@ -18,9 +18,9 @@ const style = (
     }
 
     .effect:hover {
-text-transform: capitalize;
-color: gold;
-font-weight: bold;
+        text-transform: capitalize;
+        color: gold;
+        font-weight: bold;
     }
 
     .aside-info {
@@ -73,7 +73,7 @@ interface Props {
   show?: boolean;
 }
 
-function Overlay({ show }: Props) {
+function Overlay({show}: Props) {
   return (
     <>
       <div className="overlay-container centered">
@@ -82,7 +82,7 @@ function Overlay({ show }: Props) {
             <img
               src="/images/me_alt.png"
               alt="me"
-              className={`${show ? "show" : "hide"}`}
+              className={`${show ? 'show' : 'hide'}`}
             />
           </div>
         </div>

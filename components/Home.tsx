@@ -126,7 +126,7 @@ function Home() {
           </p>
           <div className="social centered">
             <a href="https://github.com/theBashShell" target="_blank">
-              <img src="https://img.icons8.com/windows/32/000000/github.png" />
+            <img src="https://img.icons8.com/material-rounded/32/000000/github.png" />
             </a>
             <a href="https://www.linkedin.com/in/bruno-edoh/" target="_blank">
               <img src="https://img.icons8.com/windows/32/000000/linkedin-2.png" />
