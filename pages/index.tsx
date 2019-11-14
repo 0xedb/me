@@ -15,7 +15,7 @@ const style = (
         transition: all 0.4s ease 0.1s;
       }
 
-      html {
+      html, body {
         height: 100vh;
       }
 

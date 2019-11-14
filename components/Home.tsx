@@ -73,11 +73,9 @@ const style = (
       width: 100%;
       color: #f5f5f5;
       max-width: 450px;
-    }
-
-    .content h2 {
       font-family: "Quicksand", sans-serif;
-    }
+      padding: 20px;
+    } 
 
     @media (min-width: 700px) {
       .social {
@@ -164,7 +162,8 @@ function Home() {
         </div>
         <div className="content">
           <h2>Can I Help You?</h2>
-          <div>eyyy</div>
+          <p>Have an interesting idea/project you wanna discuss?</p>
+           
         </div>
       </div>
       {style}

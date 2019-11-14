@@ -9,7 +9,7 @@ const style = (
 
     .overlay {
       position: relative;
-      width: 100vw;
+      width: 100%;
       height: 0vh;
       background: #191a1e;
       z-index: 80;
@@ -24,8 +24,7 @@ const style = (
 
     nav {
       z-index: 100;
-      box-shadow: 0 2px 2px 0 #dadada24,
-        0 3px 1px -2px #efefef1f,
+      box-shadow: 0 2px 2px 0 #dadada24, 0 3px 1px -2px #efefef1f,
         0 1px 5px 0 #e2e2e233;
       background-color: #ffffff;
     }
@@ -77,18 +76,17 @@ function Navbar() {
               {`<bruno />`}
             </a>
             <ul className="right">
-              <li>
-                <a href="#">
+              <a>
+                <div onClick={handleMenu}>
                   <i
                     className={`material-icons ${
                       overlay ? "white_color" : "black_color"
                     }`}
-                    onClick={handleMenu}
                   >
                     {overlay ? "close" : "sort"}
                   </i>
-                </a>
-              </li>
+                </div>
+              </a>
             </ul>
           </div>
         </nav>
