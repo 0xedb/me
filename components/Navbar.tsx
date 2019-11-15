@@ -19,7 +19,7 @@ const style = (
     .tabs {
       position: sticky;
       top: 0;
-      background: rgb(255, 254, 251);
+      background: #fffff;
     }
 
     nav {
