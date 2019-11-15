@@ -3,25 +3,6 @@ import Overlay from './Overlay';
 
 const style = (
   <style jsx>{`
-    a {
-      font-family: 'Quicksand', sans-serif;
-      color: #ffff;
-    }
-
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 0vh;
-      background: #191a1e;
-      z-index: -20;
-      opacity: 0;
-      transition: all 0.6s ease-in-out;
-    }
-
-    .overlay-active {
-      height: 100vh;
-      opacity: 1;
-    }
     .navbar-side {
       width: 100%;
       display: flex;
@@ -33,6 +14,12 @@ const style = (
       font-size: 30px;
       font-family: 'Caveat', cursive;
       font-weight: bolder;
+    }
+
+    .tabs {
+      position: sticky;
+      top: 0;
+      background: rgb(255, 254, 251);
     }
 
     nav {
@@ -85,27 +72,26 @@ function Navbar() {
           </div>
         </div>
       </nav>
+      <div className="tabs is-centered">
+        <ul>
+          <li className="">
+            <a>about</a>
+          </li>
+          <li>
+            <a>work</a>
+          </li>
+          <li>
+            <a>fun</a>
+          </li>
+          <li>
+            <a>blog</a>
+          </li>
+        </ul>
+      </div>
       {style}
     </>
   );
 }
 
 export default Navbar;
-
-// <div className={`overlay centered ${overlay ? 'overlay-active' : ''}`}>
-//           <Overlay show={overlay ? true : false} />
-//         </div>
-
-// <div className="navbar-side">
-//             <div className="navbar-item" onClick={handleMenu}>
-//               <a>
-//                 <i
-//                   className={` material-icons  ${
-//                     overlay ? 'white_color' : 'black_color'
-//                   }`}
-//                 >
-//                   {overlay ? 'close' : 'sort'}
-//                 </i>
-//               </a>
-//             </div>
-//           </div>
+ 
