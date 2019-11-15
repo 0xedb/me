@@ -22,29 +22,24 @@ const style = (
       height: 100vh;
       opacity: 1;
     }
-
-    nav {
-      box-shadow: 0 2px 2px 0 #dadada24, 0 3px 1px -2px #efefef1f,
-        0 1px 5px 0 #e2e2e233;
-    }
-
     .navbar-side {
       width: 100%;
       display: flex;
       flex-flow: row-reverse;
+      justify-content: center;
     }
 
     .brand-logo {
       opacity: 0.4;
       font-size: 30px;
       font-family: 'Caveat', cursive;
+      font-weight: bolder;
     }
 
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: #ffff;
+    nav { 
+      width: 100%; 
+      background: transparent;
+      padding: 3px;
     }
 
     .black_color {
@@ -74,7 +69,7 @@ function Navbar() {
   return (
     <>
       <nav className={`${overlay ? 'black_bg' : ''}`}>
-        <div className="navbar-brand">
+        <div className="navbar-side">
           <div className="navbar-item">
             <a
               href="#"
@@ -85,19 +80,7 @@ function Navbar() {
               {`<bruno />`}
             </a>
           </div>
-          <div className="navbar-side">
-            <div className="navbar-item" onClick={handleMenu}>
-              <a>
-                <i
-                  className={` material-icons  ${
-                    overlay ? 'white_color' : 'black_color'
-                  }`}
-                >
-                  {overlay ? 'close' : 'sort'}
-                </i>
-              </a>
-            </div>
-          </div>
+          
         </div>
 
         <div className={`overlay centered ${overlay ? 'overlay-active' : ''}`}>
@@ -110,3 +93,18 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+// <div className="navbar-side">
+//             <div className="navbar-item" onClick={handleMenu}>
+//               <a>
+//                 <i
+//                   className={` material-icons  ${
+//                     overlay ? 'white_color' : 'black_color'
+//                   }`}
+//                 >
+//                   {overlay ? 'close' : 'sort'}
+//                 </i>
+//               </a>
+//             </div>
+//           </div>
