@@ -1,31 +1,38 @@
-import Pages from "../util/Pages";
-import Navbar from "./Navbar";
-import { useEffect, useState } from "react";
-import { store } from "../util/reducers";
+import Pages from '../util/Pages';
+import Navbar from './Navbar';
+import {gsap} from 'gsap';
+import {useEffect, useState, useRef, MutableRefObject} from 'react';
+import {store} from '../util/reducers';
 
- 
+const style = (
+  <style>{`
+     
+`}</style>
+);
 
 function Page() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState('home');
+  let pageRef = useRef<HTMLElement>(null);
 
   const getPageComponent = (page: string) => {
-    const component = Pages.get(page);
-    return component;
+    return Pages.get(page);
   };
 
   useEffect(() => {
     const unsubscribe = store.subscribe(() => {
       setPage(store.getState().page);
-    });
+    }); 
+
     return () => {
       unsubscribe;
     };
-  });
+  }, []);
 
   return (
     <>
       <Navbar />
-      <section>{getPageComponent(page)}</section> 
+      <section ref={pageRef}>{getPageComponent(page)}</section>
+      {style}
     </>
   );
 }
