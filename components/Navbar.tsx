@@ -25,7 +25,6 @@ const style = (
     .navbar-side {
       width: 100%;
       display: flex;
-      flex-flow: row-reverse;
       justify-content: center;
     }
 
@@ -36,8 +35,8 @@ const style = (
       font-weight: bolder;
     }
 
-    nav { 
-      width: 100%; 
+    nav {
+      width: 100%;
       background: transparent;
       padding: 3px;
     }
@@ -55,6 +54,10 @@ const style = (
     }
 
     @media (min-width: 700px) {
+      .brand-logo {
+        font-size: 40px;
+        padding-top: 4px;
+      }
     }
   `}</style>
 );
@@ -80,11 +83,6 @@ function Navbar() {
               {`<bruno />`}
             </a>
           </div>
-          
-        </div>
-
-        <div className={`overlay centered ${overlay ? 'overlay-active' : ''}`}>
-          <Overlay show={overlay ? true : false} />
         </div>
       </nav>
       {style}
@@ -94,6 +92,9 @@ function Navbar() {
 
 export default Navbar;
 
+// <div className={`overlay centered ${overlay ? 'overlay-active' : ''}`}>
+//           <Overlay show={overlay ? true : false} />
+//         </div>
 
 // <div className="navbar-side">
 //             <div className="navbar-item" onClick={handleMenu}>
