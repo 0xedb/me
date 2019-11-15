@@ -5,6 +5,7 @@ const style = (
   <style jsx>{`
     a {
       font-family: 'Quicksand', sans-serif;
+      color: #ffff;
     }
 
     .overlay {
@@ -30,15 +31,20 @@ const style = (
     .navbar-side {
       width: 100%;
       display: flex;
-      flex-flow: row-reverse nowrap;
+      flex-flow: row-reverse;
     }
 
     .brand-logo {
       opacity: 0.4;
+      font-size: 30px;
+      font-family: 'Caveat', cursive;
     }
 
-    .navbar-menu {
-      background: transparent;
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: #ffff;
     }
 
     .black_color {
@@ -67,7 +73,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`navbar is-fixed-top ${overlay ? 'black_bg' : ''}`}>
+      <nav className={`${overlay ? 'black_bg' : ''}`}>
         <div className="navbar-brand">
           <div className="navbar-item">
             <a
@@ -80,20 +86,16 @@ function Navbar() {
             </a>
           </div>
           <div className="navbar-side">
-            <div className="navbar-menu is-active">
-              <div className="navbar-end is-right">
-                <div className="navbar-item" onClick={handleMenu}>
-                  <a>
-                    <i
-                      className={` material-icons  ${
-                        overlay ? 'white_color' : 'black_color'
-                      }`}
-                    >
-                      {overlay ? 'close' : 'sort'}
-                    </i>
-                  </a>
-                </div>
-              </div>
+            <div className="navbar-item" onClick={handleMenu}>
+              <a>
+                <i
+                  className={` material-icons  ${
+                    overlay ? 'white_color' : 'black_color'
+                  }`}
+                >
+                  {overlay ? 'close' : 'sort'}
+                </i>
+              </a>
             </div>
           </div>
         </div>

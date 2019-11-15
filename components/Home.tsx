@@ -1,11 +1,11 @@
 const style = (
   <style jsx>{`
-    #home { 
+    #home {
       height: 100%;
     }
 
     .intro {
-      width: 100%; 
+      width: 100%;
       padding: 20px;
     }
 
@@ -27,15 +27,15 @@ const style = (
     }
 
     .title {
-      text-transform: uppercase;
+      text-transform: capitalize;
       color: #02020270;
       font-size: 16px;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Monda', sans-serif;
       text-align: center;
     }
 
     .description {
-      font-family: "Ubuntu", sans-serif;
+      font-family: 'Ubuntu', sans-serif;
       font-size: 33px;
       text-align: center;
       max-width: 560px;
@@ -68,8 +68,14 @@ const style = (
       width: 100%;
       color: #f5f5f5;
       max-width: 450px;
-      font-family: "Quicksand", sans-serif;
+      font-family: 'Quicksand', sans-serif;
       padding: 20px;
+    }
+
+    sup {
+      top: -0.7em;
+      right: 0px;
+      z-index: -1;
     }
 
     @media (min-width: 700px) {
@@ -77,7 +83,7 @@ const style = (
         position: fixed;
         left: 22px;
         flex-flow: column nowrap;
-        margin-top: 50px;
+        top: 30%;
       }
 
       .social img {
@@ -107,13 +113,13 @@ function Home() {
     <>
       <div id="home" className="centered min">
         <div className="intro centered min">
-          <h1 className="title min">Full Stack Software Engineer</h1>
-          <div>
+          <h1 className="title min">
+            Full Stack Software Engineer &nbsp;
             <img
               className="verified"
               src="https://img.icons8.com/color/32/000000/verified-account.png"
             />
-          </div>
+          </h1>
           <p className="description">
             I design and develop &nbsp;
             <span className="standout">
@@ -126,7 +132,7 @@ function Home() {
           </p>
           <div className="social centered">
             <a href="https://github.com/theBashShell" target="_blank">
-            <img src="https://img.icons8.com/material-rounded/32/000000/github.png" />
+              <img src="https://img.icons8.com/material-rounded/32/000000/github.png" />
             </a>
             <a href="https://www.linkedin.com/in/bruno-edoh/" target="_blank">
               <img src="https://img.icons8.com/windows/32/000000/linkedin-2.png" />
@@ -156,7 +162,7 @@ function Home() {
           </picture>
         </div>
         <div className="content">
-          <h2>Can I Help You?</h2>
+          <h2 className="is-medium">I'm Bruno</h2>
           <p>Have an interesting idea/project you wanna discuss?</p>
           God called the dry land Earth, and the man and for his wife, and they
           become one flesh. To rule the day that you have done? The woman whom
