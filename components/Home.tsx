@@ -1,4 +1,4 @@
-
+import {Social} from './Page';
 
 const style = (
   <style jsx>{`
@@ -11,22 +11,7 @@ const style = (
       padding: 20px;
     }
 
-    .social {
-      flex-flow: row wrap;
-    }
-
-    .social img {
-      width: 40px;
-      transition: all 0.5s ease 0.1s;
-      padding: 7px 0;
-      padding-top: 18px;
-    }
-
-    .social img:hover {
-      transform: scale(1.3);
-      filter: grayscale(1);
-      transition: all 0.5s ease 0.1s;
-    }
+    
 
     .title {
       text-transform: capitalize;
@@ -80,17 +65,7 @@ const style = (
       z-index: -1;
     }
 
-    @media (min-width: 700px) {
-      .social {
-        position: fixed;
-        left: 22px;
-        flex-flow: column nowrap;
-        top: 30%;
-      }
-
-      .social img {
-        padding-top: 5px;
-      }
+    @media (min-width: 700px) { 
 
       .myself {
         width: 80%;
@@ -134,26 +109,7 @@ function Home() {
             </span>
             apps
           </p>
-          <div className="social centered">
-            <a href="https://github.com/theBashShell" target="_blank">
-              <img src="https://img.icons8.com/material-rounded/32/000000/github.png" />
-            </a>
-            <a href="https://www.linkedin.com/in/bruno-edoh/" target="_blank">
-              <img src="https://img.icons8.com/windows/32/000000/linkedin-2.png" />
-            </a>
-            <a href="https://twitter.com/theBashShell" target="_blank">
-              <img src="https://img.icons8.com/windows/48/000000/twitter.png" />
-            </a>
-            <a
-              href="https://stackoverflow.com/users/6790436/thebashshell"
-              target="_blank"
-            >
-              <img src="https://img.icons8.com/windows/32/000000/stackoverflow.png" />
-            </a>
-            <a href="https://www.instagram.com/thebashshell/" target="_blank">
-              <img src="https://img.icons8.com/windows/48/000000/instagram.png" />
-            </a>
-          </div>
+          <Social />
         </div>
         <div className="myself centered">
           <picture className="myself_img">
