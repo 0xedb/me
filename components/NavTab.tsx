@@ -1,7 +1,9 @@
 import React from 'react'
 import {Tabs} from 'antd';
-const {TabPane} = Tabs;
-import Home from './Home';
+const {TabPane} = Tabs; 
+import dynamic from 'next/dynamic'
+
+const Home = dynamic(() => import('./Home'))
 
 const style = <style>{` 
   
