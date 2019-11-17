@@ -20,12 +20,6 @@ const style = (
       font-weight: bolder;
     }
 
-    .tabs {
-      position: sticky;
-      top: 0;
-      background: #ffff;
-    }
-
     nav {
       width: 100%;
       background: transparent;
@@ -84,22 +78,6 @@ function Navbar() {
             </a> 
         </div>
       </nav>
-      <div className="tabs is-centered">
-        <ul>
-          <li className="">
-            <a>about</a>
-          </li>
-          <li>
-            <a>work</a>
-          </li>
-          <li>
-            <a>fun</a>
-          </li>
-          <li>
-            <a>blog</a>
-          </li>
-        </ul>
-      </div>
       {style}
     </>
   );

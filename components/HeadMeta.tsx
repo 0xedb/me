@@ -1,6 +1,5 @@
 import {Helmet} from 'react-helmet';
-// import 'bulma/css/bulma.min.css';
-
+import 'antd/dist/antd.css';
 interface Props {
   children?: JSX.Element;
 }

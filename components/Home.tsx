@@ -1,3 +1,5 @@
+
+
 const style = (
   <style jsx>{`
     #home {
@@ -108,9 +110,11 @@ const style = (
   `}</style>
 );
 
+
+
 function Home() {
   return (
-    <>
+    <>  
       <div id="home" className="centered min">
         <div className="intro centered min">
           <h1 className="title min">

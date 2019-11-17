@@ -1,5 +1,4 @@
-import HeadMeta from "../components/HeadMeta";
-import Navbar from "../components/Navbar";
+import HeadMeta from "../components/HeadMeta"; 
 import Page from "../components/Page";
 
 const style = (

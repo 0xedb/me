@@ -1,8 +1,5 @@
-import Pages from '../util/Pages';
-import Navbar from './Navbar';
-import {gsap} from 'gsap';
-import {useEffect, useState, useRef, MutableRefObject} from 'react';
-import {store} from '../util/reducers';
+import Navbar from './Navbar'; 
+import NavTab from './NavTab';
 
 const style = (
   <style>{`
@@ -10,28 +7,12 @@ const style = (
 `}</style>
 );
 
-function Page() {
-  const [page, setPage] = useState('home');
-  let pageRef = useRef<HTMLElement>(null);
-
-  const getPageComponent = (page: string) => {
-    return Pages.get(page);
-  };
-
-  useEffect(() => {
-    const unsubscribe = store.subscribe(() => {
-      setPage(store.getState().page);
-    }); 
-
-    return () => {
-      unsubscribe;
-    };
-  }, []);
+function Page() { 
 
   return (
     <>
       <Navbar />
-      <section ref={pageRef}>{getPageComponent(page)}</section>
+      <NavTab /> 
       {style}
     </>
   );
