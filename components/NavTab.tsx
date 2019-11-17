@@ -4,45 +4,46 @@ const {TabPane} = Tabs;
 import dynamic from 'next/dynamic'
 
 const Home = dynamic(() => import('./Home'))
+const About = dynamic(() => import('./About'))
+const Work = dynamic(() => import('./Work'))
+const Fun = dynamic(() => import('./Fun'))
+const Blog = dynamic(() => import('./Blog'))
 
-const style = <style>{` 
-  
-  .tab-content {
-      background: wheat;
-  }
 
+
+const style = <style>{`  
   .ant-tabs-nav-container {
     position: sticky;
     top: 0;
     background: #ffff;
+    display: flex;
+    justify-content: center;
   }
 
   .home-tab {
       height: 26px;
   }
 
-  
-
   `}</style>
-
+ 
 function NavTab() {
     return (
         <>
-        <Tabs defaultActiveKey="0"  className="centered min" size='small' tabBarGutter={1} >
-        <TabPane tab={<img className='home-tab' src="https://img.icons8.com/nolan/64/000000/home-page.png" />} key="0">
+        <Tabs defaultActiveKey="0"  className="  min" size='small' tabBarGutter={1} >
+        <TabPane tab={<img className='home-tab' src="https://img.icons8.com/nolan/64/000000/home-page.png"  alt='home' />} key="0">
       <Home />
     </TabPane>
     <TabPane tab="about" key="1">
-      <div className="tab-content">hey</div> 1
+      <About />
     </TabPane>
     <TabPane tab="work" key="2">
-      <div className="tab-content">hey</div> 2
+      <Work />
     </TabPane>
     <TabPane tab="fun" key="3">
-      <div className="tab-content">hey</div> 3
+     <Fun />
     </TabPane>
     <TabPane tab="blog" key="4">
-      <div className="tab-content">hey</div> k3
+      <Blog />
     </TabPane>
     </Tabs> 
     {style}

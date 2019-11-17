@@ -23,8 +23,7 @@
   },
   "devDependencies": {
     "@iconify/icons-noto": "^1.0.5",
-    "@iconify/react": "^1.1.1",
-    "@types/materialize-css": "^1.0.6",
+    "@iconify/react": "^1.1.1", 
     "@types/node": "^12.12.6",
     "@types/react": "^16.9.11",
     "@types/react-helmet": "^5.0.14",

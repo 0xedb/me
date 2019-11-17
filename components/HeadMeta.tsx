@@ -13,11 +13,7 @@ function HeadMeta(props: Props) {
       <link
         href="https://fonts.googleapis.com/css?family=Monda|Caveat|Quicksand|Ubuntu:700&display=swap"
         rel="stylesheet"
-      />
-      <script
-        defer
-        src="../node_modules/materialize-css/dist/js/materialize.min.js"
-      ></script>
+      /> 
     </Helmet>
   );
 }
