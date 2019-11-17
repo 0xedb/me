@@ -1,4 +1,3 @@
-import {Social} from './Page';
 
 const style = (
   <style jsx>{`
@@ -108,8 +107,7 @@ function Home() {
               </span>
             </span>
             apps
-          </p>
-          <Social />
+          </p> 
         </div>
         <div className="myself centered">
           <picture className="myself_img">

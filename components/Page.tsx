@@ -61,6 +61,7 @@ function Page() {
     <>
       <Navbar />
       <NavTab /> 
+      <Social />
       {style}
     </>
   );
