@@ -9,6 +9,10 @@ const style = (
       justify-content: center;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .brand-logo {
       opacity: 0;
       font-size: 30px;
@@ -68,8 +72,7 @@ function Navbar() {
   return (
     <>
       <nav className={`${overlay ? 'black_bg' : ''}`}>
-        <div className="navbar-side">
-          <div className="navbar-item">
+        <div className="navbar-side"> 
             <a
               ref={navRef}
               href="#"
@@ -78,8 +81,7 @@ function Navbar() {
               }`}
             >
               {`<bruno />`}
-            </a>
-          </div>
+            </a> 
         </div>
       </nav>
       <div className="tabs is-centered">
