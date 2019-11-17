@@ -15,6 +15,10 @@ const style = <style>{`
     background: #ffff;
   }
 
+  .home-tab {
+      height: 26px;
+  }
+
   
 
   `}</style>
@@ -23,7 +27,7 @@ function NavTab() {
     return (
         <>
         <Tabs defaultActiveKey="0"  className="centered min" size='small' tabBarGutter={1} >
-        <TabPane tab={<img src="https://img.icons8.com/nolan/64/000000/home-page.png" />} key="0">
+        <TabPane tab={<img className='home-tab' src="https://img.icons8.com/nolan/64/000000/home-page.png" />} key="0">
       <Home />
     </TabPane>
     <TabPane tab="about" key="1">
