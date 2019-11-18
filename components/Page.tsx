@@ -1,6 +1,5 @@
 import Navbar from './Navbar'; 
-import NavTab from './NavTab';
-import Footer from './Footer';
+import NavTab from './NavTab'; 
 
 
 const style = (
@@ -64,8 +63,6 @@ function Page() {
     <>
       <Navbar />
       <NavTab /> 
-      <Social />
-      <Footer />
       {style}
     </>
   );
