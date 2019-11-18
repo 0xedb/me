@@ -1,4 +1,5 @@
 import Footer from './Footer';
+import {Social} from './Page';
 
 const style = <style>{`
 #about {
@@ -92,8 +93,7 @@ const style = <style>{`
 
 function About() {
     return (
-        <>
-        
+        <> 
         <div id='about' className='centered min'><h1>I'm Bruno</h1>
         <div className="intro-description centered">
         <div><picture>
@@ -111,6 +111,7 @@ function About() {
         </section>
         <section>Education</section>            
         </div>
+        <Social />
         <Footer />
         {style}
         </>

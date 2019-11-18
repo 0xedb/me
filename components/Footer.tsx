@@ -10,11 +10,7 @@ footer div {
 }
 
 @media(min-width:700px) {
-      
-
-    footer div {
-        width: 80%
-    }
+    
     
 }
 `}</style>
