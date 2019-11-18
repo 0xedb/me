@@ -6,7 +6,7 @@ const style = <style>{`
     font-family: 'Quicksand', sans-serif;
 }
 
-    .intro-description {
+    .intro-description, .my-pic {
         width: 100%; 
     }
 
@@ -96,7 +96,7 @@ function About() {
         <> 
         <div id='about' className='centered min'><h1>I'm Bruno</h1>
         <div className="intro-description centered">
-        <div><picture>
+        <div className='my-pic'><picture>
         <source srcSet='/images/myself3.jpg' media="(min-width: 700px)" />
         <img src='/images/myself3_0.jpg' alt='bruno' />
         </picture></div>

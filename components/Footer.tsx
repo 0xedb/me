@@ -2,30 +2,25 @@
 const style=<style>{`
   
 footer div { 
-    background: black; 
-    width: 100%;
-    max-width: 950px;
+    background: black;  
     height: 90px;
     color: #d0d0d0bf;
 }
-
-@media(min-width:700px) {
-    
-    
-}
+ 
 `}</style>
 
 interface Props {
-    max?: string;
+    css?: JSX.Element;
 }
+ 
 
-function Footer({max}: Props) {
+function Footer({css}: Props) {
     return (
         <>
-        <footer className='centered' style={{maxWidth: max}}>
-            <div className='centered'>&copy; 2019</div>
-            
+        <footer className='centered'>
+            <div className='centered' >&copy; 2019</div>
             </footer>
+           {css}
         {style}
         </>
     )

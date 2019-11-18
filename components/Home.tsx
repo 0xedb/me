@@ -85,6 +85,20 @@ const style = (
 );
 
 
+const css = <style>{`
+    footer div {
+      max-width: 450px;
+      width: 100%;
+    }
+
+    @media(min-width: 700px) {
+      footer div {
+        width: 80%;
+        max-width: 635px;
+      }
+    }
+`}</style>
+
 
 function Home() {
   return (
@@ -150,7 +164,7 @@ function Home() {
           icons by Icons8
         </a>
       </div>
-      <Footer />
+      <Footer css={css} />
       {style}
     </>
   );
