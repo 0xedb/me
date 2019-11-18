@@ -1,10 +1,9 @@
 import {Social} from './Page';
+import Footer from './Footer'
 
 const style = (
   <style jsx>{`
-    #home {
-      height: 100%;
-    }
+     
 
     .intro {
       width: 100%;
@@ -144,13 +143,15 @@ function Home() {
           tree of the knowledge of good and evil.
         </div>
       </div>
-      {style}
+      
       <div className="credit">
         <a href="https://icons8.com">
           GitHub, LinkedIn, Twitter, Instagram, Stack Overflow, Verified Account
           icons by Icons8
         </a>
       </div>
+      <Footer />
+      {style}
     </>
   );
 }

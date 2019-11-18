@@ -1,3 +1,4 @@
+import Footer from './Footer';
 
 const style = <style>{`
 #about {
@@ -110,6 +111,7 @@ function About() {
         </section>
         <section>Education</section>            
         </div>
+        <Footer />
         {style}
         </>
     )

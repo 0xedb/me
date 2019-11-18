@@ -36,7 +36,7 @@ interface Props {
 function Footer({max}: Props) {
     return (
         <>
-        <footer className='centered'>
+        <footer className='centered' style={{maxWidth: max}}>
             <div className='centered'>&copy; 2019</div>
             
             </footer>
