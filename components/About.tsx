@@ -23,6 +23,38 @@ const style = <style>{`
         height: 330px !important;
     }
 
+    
+
+    .locate {
+        position: absolute;
+        left: 59%;
+        top: 81%;
+        padding-top: 30px;
+        background: gold; 
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 7px;   z-index: 1;
+   
+    }
+    
+    .locate-outer {
+        background: transparent;
+        border: 1px solid gold; 
+        animation: scale-up 1.5s ease-out infinite;
+    }
+
+    @keyframes scale-up {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
+
     @media(min-width: 700px) {
         .intro-description {
             max-width: 950px;
@@ -40,6 +72,19 @@ const style = <style>{`
         .city {
             padding-top: 80px;
         }
+
+
+        .locate {
+            left: 71%;
+    top: 84%;      
+    
+    width: 24px;
+        height: 24px;
+        }
+
+        .locate-outer {
+            border-width: 2px ;
+        }
     }
 `}</style>
 
@@ -56,12 +101,14 @@ function About() {
         </picture></div>
         <div><p>hello world</p></div>
         </div>
-
+<div className='locate'></div>
+<div className='locate locate-outer'></div>
         <section className='intro-description centered city'>
         <div>one</div>
+        
         <div><img className="city-img" src='/images/accra.png' alt='accra' /></div>
         </section>
-            
+        <section>Education</section>            
         </div>
         {style}
         </>

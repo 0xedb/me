@@ -9,7 +9,7 @@ footer {
 footer div { 
     background: black; 
     width: 100%;
-    max-width: 635px;
+    max-width: 950px;
     height: 90px;
     color: #d0d0d0bf;
 }
@@ -29,7 +29,11 @@ footer div {
 }
 `}</style>
 
-function Footer() {
+interface Props {
+    max?: string;
+}
+
+function Footer({max}: Props) {
     return (
         <>
         <footer className='centered'>
