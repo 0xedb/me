@@ -2,6 +2,7 @@ import Navbar from './Navbar';
 import NavTab from './NavTab';
 import Footer from './Footer';
 
+
 const style = (
   <style>{`
   .social {

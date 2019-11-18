@@ -1,5 +1,5 @@
 import React from 'react'
-import {Tabs} from 'antd';
+import {Tabs, Icon} from 'antd';
 const {TabPane} = Tabs; 
 import dynamic from 'next/dynamic'
 
@@ -30,7 +30,7 @@ function NavTab() {
     return (
         <>
         <Tabs defaultActiveKey="0"  className="tabs  min" size='small' tabBarGutter={1} >
-        <TabPane tab={<img className='home-tab' src="https://img.icons8.com/nolan/64/000000/home-page.png"  alt='home' />} key="0">
+        <TabPane tab={<Icon type="bulb" />} key="0">
       <Home />
     </TabPane>
     <TabPane tab="about" key="1">
