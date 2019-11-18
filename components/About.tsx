@@ -30,7 +30,7 @@ const style = <style>{`
     .locate {
         position: absolute;
         left: 59%;
-        top: 81%;
+        top: 70%;
         padding-top: 30px;
         background: gold; 
         width: 20px;
@@ -77,11 +77,10 @@ const style = <style>{`
 
 
         .locate {
-            left: 71%;
-    top: 84%;      
-    
-    width: 24px;
-        height: 24px;
+            left: 74%;
+            top: 78%;
+            width: 24px;
+            height: 24px;
         }
 
         .locate-outer {
@@ -90,6 +89,19 @@ const style = <style>{`
     }
 `}</style>
 
+const css = <style>{`
+    footer div {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @media(min-width: 700px) {
+        footer div {
+            max-width: 950px; 
+            width: 100%;
+        }
+    }
+`}</style>
 
 function About() {
     return (
@@ -112,7 +124,7 @@ function About() {
         <section>Education</section>            
         </div>
         <Social />
-        <Footer />
+        <Footer css={css} />
         {style}
         </>
     )
