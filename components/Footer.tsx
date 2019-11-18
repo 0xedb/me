@@ -1,11 +1,6 @@
  
 const style=<style>{`
-footer {
-
-    margin-top: 18px;
-}
-
-
+  
 footer div { 
     background: black; 
     width: 100%;
@@ -15,12 +10,7 @@ footer div {
 }
 
 @media(min-width:700px) {
-    footer {
-
-        margin-top: 70px;
-
-    }
-
+      
 
     footer div {
         width: 80%
