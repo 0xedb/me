@@ -29,7 +29,7 @@ const style = <style>{`
 function NavTab() {
     return (
         <>
-        <Tabs defaultActiveKey="0"  className="  min" size='small' tabBarGutter={1} >
+        <Tabs defaultActiveKey="0"  className="tabs  min" size='small' tabBarGutter={1} >
         <TabPane tab={<img className='home-tab' src="https://img.icons8.com/nolan/64/000000/home-page.png"  alt='home' />} key="0">
       <Home />
     </TabPane>

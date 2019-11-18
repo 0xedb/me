@@ -1,5 +1,6 @@
 import Navbar from './Navbar'; 
 import NavTab from './NavTab';
+import Footer from './Footer';
 
 const style = (
   <style>{`
@@ -19,6 +20,7 @@ const style = (
     filter: grayscale(1);
     transition: all 0.5s ease 0.1s;
   }
+ 
   @media (min-width: 700px) {
     .social {
       position: fixed;
@@ -62,6 +64,7 @@ function Page() {
       <Navbar />
       <NavTab /> 
       <Social />
+      <Footer />
       {style}
     </>
   );
