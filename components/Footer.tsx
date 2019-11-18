@@ -2,7 +2,7 @@
 const style=<style>{`
 footer {
 
-    margin-top: 100px;
+    margin-top: 18px;
 }
 
 
