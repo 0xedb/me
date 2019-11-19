@@ -3,15 +3,16 @@ import NavTab from './NavTab';
 
 
 const style = (
+
   <style>{`
   .social {
     flex-flow: row wrap;
   }
 
   .social img {
-    width: 40px;
+    width: 40px;  
     transition: all 0.5s ease 0.1s;
-    padding: 7px 0;
+    padding: 7px 7px;
     padding-top: 18px;
   }
 
@@ -30,7 +31,7 @@ const style = (
     }
 
     .social img {
-      padding-top: 5px;
+      padding-top: 5px; 
     }
   }
 `}</style>
@@ -38,22 +39,25 @@ const style = (
 
 export const Social = () =>  <div className="social centered">
 <a href="https://github.com/theBashShell" target="_blank">
-  <img src="https://img.icons8.com/material-rounded/32/000000/github.png" />
+  <img src="https://api.iconify.design/logos:github-icon.svg" />
 </a>
 <a href="https://www.linkedin.com/in/bruno-edoh/" target="_blank">
-  <img src="https://img.icons8.com/windows/32/000000/linkedin-2.png" />
+  <img src="https://api.iconify.design/ps:linkedin.svg" />
 </a>
 <a href="https://twitter.com/theBashShell" target="_blank">
-  <img src="https://img.icons8.com/windows/48/000000/twitter.png" />
+  <img src="https://api.iconify.design/dashicons:twitter.svg" />
 </a>
 <a
   href="https://stackoverflow.com/users/6790436/thebashshell"
   target="_blank"
 >
-  <img src="https://img.icons8.com/windows/32/000000/stackoverflow.png" />
+  <img src="https://api.iconify.design/simple-icons:stackoverflow.svg" />
 </a>
 <a href="https://www.instagram.com/thebashshell/" target="_blank">
-  <img src="https://img.icons8.com/windows/48/000000/instagram.png" />
+  <img src="https://api.iconify.design/ion:logo-instagram.svg" />
+</a>
+<a href='https://codesandbox.io/u/theBashShell' target="_blank">
+<img src='https://api.iconify.design/logos-codesandbox.svg' />
 </a>
 </div>
 

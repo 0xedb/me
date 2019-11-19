@@ -12,7 +12,7 @@ const Blog = dynamic(() => import('./Blog'))
 
 
 const style = <style>{`  
-  .ant-tabs-nav-container {
+  .tabs {
     position: sticky;
     top: 0;
     background: #ffff;
@@ -29,26 +29,28 @@ const style = <style>{`
 function NavTab() {
     return (
         <>
-        <Tabs defaultActiveKey="0"  className="tabs  min" size='small' tabBarGutter={1} >
-        <TabPane tab={<Icon type="bulb" />} key="0">
-      <Home />
-    </TabPane>
-    <TabPane tab="about" key="1">
-      <About />
-    </TabPane>
-    <TabPane tab="work" key="2">
-      <Work />
-    </TabPane>
-    <TabPane tab="fun" key="3">
-     <Fun />
-    </TabPane>
-    <TabPane tab="blog" key="4">
-      <Blog />
-    </TabPane>
-    </Tabs> 
+        <Home />
     {style}
     </>
     )
 }
 
 export default NavTab
+
+// <Tabs defaultActiveKey="0"  className="tabs centered  min" size='small' tabBarGutter={1} >
+//         <TabPane tab={<Icon type="bulb" />} key="0">
+//       <Home />
+//     </TabPane>
+//     <TabPane tab="about" key="1">
+//       <About />
+//     </TabPane>
+//     <TabPane tab="work" key="2">
+//       <Work />
+//     </TabPane>
+//     <TabPane tab="fun" key="3">
+//      <Fun />
+//     </TabPane>
+//     <TabPane tab="blog" key="4">
+//       <Blog />
+//     </TabPane>
+//     </Tabs> 
