@@ -2,7 +2,7 @@ import {PAGE} from '../util/pages';
 import HeadMeta from '../components/HeadMeta';
 import Page from '../components/Page';
 
-function blog() {
+function Blog() {
     return (
         <>
     <div id="thebashshell">
@@ -15,4 +15,4 @@ function blog() {
     )
 }
 
-export default blog
+export default Blog

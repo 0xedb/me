@@ -2,7 +2,7 @@ import {PAGE} from '../util/pages';
 import HeadMeta from '../components/HeadMeta';
 import Page from '../components/Page';
 
-function about() {
+function About() {
     return (
         <>
     <div id="thebashshell">
@@ -15,4 +15,4 @@ function about() {
     )
 }
 
-export default about
+export default About

@@ -2,17 +2,17 @@ import {PAGE} from '../util/pages';
 import HeadMeta from '../components/HeadMeta';
 import Page from '../components/Page';
 
-function work() {
+function Fun() {
     return (
         <>
     <div id="thebashshell">
       <HeadMeta>
         <title>Bruno Edoh | theBashShell</title>
       </HeadMeta>
-      <Page name={PAGE.WORK} />
+      <Page name={PAGE.FUN} />
     </div> 
   </>       
     )
 }
 
-export default work
+export default Fun
