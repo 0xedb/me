@@ -1,6 +1,11 @@
 import Navbar from './Navbar'; 
-import NavTab from './NavTab'; 
+import NavTab from './NavTab';
+import {getPage, PAGE} from '../util/pages';
 
+
+interface Props  {
+  name: PAGE;
+}
 
 const style = (
 
@@ -61,12 +66,14 @@ export const Social = () =>  <div className="social centered">
 </a>
 </div>
 
-function Page() { 
+function Page({name}: Props) {
+  const Component = getPage(name); 
 
   return (
     <>
       <Navbar />
       <NavTab /> 
+      <Component />
       {style}
     </>
   );

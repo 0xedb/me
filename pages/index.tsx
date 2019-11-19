@@ -1,5 +1,6 @@
 import HeadMeta from "../components/HeadMeta"; 
 import Page from "../components/Page";
+import {PAGE} from '../util/pages'
 
 const style = (
   <>
@@ -13,8 +14,7 @@ const style = (
       *,
       ::before,
       ::after {
-        box-sizing: border-box;
-        transition: all 0.4s ease 0.1s;
+        box-sizing: border-box; 
       }
 
       html {
@@ -63,7 +63,7 @@ const Index = () => (
       <HeadMeta>
         <title>Bruno Edoh | theBashShell</title>
       </HeadMeta>
-      <Page />
+      <Page name={PAGE.HOME} />
     </div>
     {style}
   </>

@@ -1,15 +1,6 @@
 import React from 'react'
-import {Tabs, Icon} from 'antd';
-const {TabPane} = Tabs; 
-import dynamic from 'next/dynamic'
-
-const Home = dynamic(() => import('./Home'))
-const About = dynamic(() => import('./About'))
-const Work = dynamic(() => import('./Work'))
-const Fun = dynamic(() => import('./Fun'))
-const Blog = dynamic(() => import('./Blog'))
-
-
+import {Breadcrumb, Icon} from 'antd'; 
+import Link from 'next/link';
 
 const style = <style>{`  
   .tabs {
@@ -29,28 +20,19 @@ const style = <style>{`
 function NavTab() {
     return (
         <>
-        <Home />
+        <div className='tabs centered'>
+        <Breadcrumb>
+        <Breadcrumb.Item><Link href='/'><a>{<Icon type='bulb' />}</a></Link></Breadcrumb.Item>
+        <Breadcrumb.Item><Link href='/about'><a>about</a></Link></Breadcrumb.Item>
+        <Breadcrumb.Item><Link href='/work'><a>work</a></Link></Breadcrumb.Item>
+        <Breadcrumb.Item><Link href='/fun'><a>fun</a></Link></Breadcrumb.Item>
+        <Breadcrumb.Item><Link href='/blog'><a>blog</a></Link></Breadcrumb.Item>
+        </Breadcrumb>
+        </div> 
+
     {style}
     </>
     )
 }
 
-export default NavTab
-
-// <Tabs defaultActiveKey="0"  className="tabs centered  min" size='small' tabBarGutter={1} >
-//         <TabPane tab={<Icon type="bulb" />} key="0">
-//       <Home />
-//     </TabPane>
-//     <TabPane tab="about" key="1">
-//       <About />
-//     </TabPane>
-//     <TabPane tab="work" key="2">
-//       <Work />
-//     </TabPane>
-//     <TabPane tab="fun" key="3">
-//      <Fun />
-//     </TabPane>
-//     <TabPane tab="blog" key="4">
-//       <Blog />
-//     </TabPane>
-//     </Tabs> 
+export default NavTab 
