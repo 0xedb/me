@@ -1,4 +1,5 @@
- 
+ import Social from './Social';
+
 const style=<style>{`
   
 footer div { 
@@ -16,8 +17,9 @@ interface Props {
 
 function Footer({css}: Props) {
     return (
-        <>
+        <> <Social />
         <footer className='centered'>
+       
             <div className='centered' >&copy; 2019</div>
             </footer>
            {css}

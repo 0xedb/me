@@ -1,4 +1,3 @@
-import {Social} from './Page';
 import Footer from './Footer'
 
 const style = (
@@ -121,8 +120,7 @@ function Home() {
               </span>
             </span>
             apps
-          </p>
-          <Social />
+          </p> 
         </div>
         <div className="myself centered">
           <picture className="myself_img">

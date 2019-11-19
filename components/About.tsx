@@ -1,5 +1,4 @@
-import Footer from './Footer';
-import {Social} from './Page';
+import Footer from './Footer'; 
 
 const style = <style>{`
 #about {
@@ -122,8 +121,7 @@ function About() {
         <div><img className="city-img" src='/images/accra.png' alt='accra' /></div>
         </section>
         <section>Education</section>            
-        </div>
-        <Social />
+        </div> 
         <Footer css={css} />
         {style}
         </>

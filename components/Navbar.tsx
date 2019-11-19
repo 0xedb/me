@@ -1,4 +1,4 @@
-import {gsap} from 'gsap';
+
 import {useState, useRef, useEffect} from 'react';
 
 const style = (
@@ -14,7 +14,6 @@ const style = (
     }
 
     .brand-logo {
-      opacity: 0;
       font-size: 30px;
       font-family: 'Caveat', cursive;
       font-weight: bolder;
@@ -51,17 +50,9 @@ function Navbar() {
   const [overlay, setOverlay] = useState(false);
   const navRef = useRef<HTMLAnchorElement>(null);
 
-  const handleMenu = () => {
-    setOverlay(prev => !prev);
-  };
-
   useEffect(() => {
-    gsap.to(navRef.current as HTMLAnchorElement, {
-      duration: 1,
-      ease: 'slow',
-      opacity: 0.8,   
-    });
-  }, []);
+    
+  });
 
   return (
     <>
