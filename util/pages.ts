@@ -15,11 +15,7 @@ pageMap.set(Page.HOME, Home);
 pageMap.set(Page.ABOUT, About);
 pageMap.set(Page.WORK, Work);
 pageMap.set(Page.FUN, Fun);
-pageMap.set(Page.BLOG, Blog);
-
-
-
-
+pageMap.set(Page.BLOG, Blog); 
 
 const getPage = (page: Page) => { 
     return pageMap.get(page); 

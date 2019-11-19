@@ -4,7 +4,7 @@ interface Props {
   children?: JSX.Element;
 }
 
-function HeadMeta(props: Props) {
+function HeadMeta({children}: Props) {
   return (
     <Helmet>
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -14,6 +14,7 @@ function HeadMeta(props: Props) {
         href="https://fonts.googleapis.com/css?family=Monda|Caveat|Quicksand|Ubuntu:700&display=swap"
         rel="stylesheet"
       /> 
+      {children}
     </Helmet>
   );
 }
