@@ -1,6 +1,10 @@
 import Footer from './Footer'; 
 import Reveal from 'react-reveal/Reveal';
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+import config from 'react-reveal/globals'; 
+ 
+
+config({ ssrFadeout: true });
 
 const style = <style>{`
 #about {
@@ -101,11 +105,11 @@ function About() {
         <div id='about' className='centered min'><h1>I'm Bruno</h1>
         <div className="intro-description centered">
         <div className='my-pic'>
-        <Zoom duration={3000}>
+        <Fade left cascade duration={1000}>
         <picture>
         <source srcSet='/images/myself3.jpg' media="(min-width: 700px)" />
         <img src='/images/myself3_0.jpg' alt='bruno' />
-        </picture></Zoom>
+        </picture></Fade>
         </div>
         <div><p>hello world</p></div>
         </div>
@@ -114,7 +118,10 @@ function About() {
         <section className='intro-description centered city'>
         <div>one</div>
         
-        <div><img className="city-img" src='/images/accra.png' alt='accra' /></div>
+        <div>
+        <Fade left cascade duration={1000}><img className="city-img" src='/images/accra.png' alt='accra' /></Fade>
+        
+        </div>
         </section>
         <section>Education</section>            
         </div> 

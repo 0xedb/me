@@ -1,5 +1,5 @@
 import Footer from './Footer'
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import Reveal from 'react-reveal/Reveal'; 
 import config from 'react-reveal/globals'; 
  
@@ -107,7 +107,7 @@ const css = <style>{`
 function Home() {
   return (
     <>  
-    <Reveal opposite cascade left ssrFadeout duration={1000}>
+    <Reveal opposite cascade bottom ssrFadeout duration={1000}>
       <div id="home" className="centered min">
         <div className="intro centered min">
           <h1 className="title min">
@@ -129,14 +129,14 @@ function Home() {
           </p> 
         </div>
         <div className="myself centered">
-        <Zoom duration={1000}><picture className="myself_img">
+        <Fade cascade duration={1000}><picture className="myself_img">
             <source srcSet="/images/myself1.png" media="(min-width: 700px)" />
             <img
               className="myself_img"
               src="/images/myself0.png"
               alt="bruno edoh"
             />
-          </picture></Zoom>
+          </picture></Fade>
           
         </div>
         <div className="content">

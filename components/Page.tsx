@@ -1,11 +1,7 @@
 import Navbar from './Navbar'; 
 import NavTab from './NavTab';
-import {getPage, PAGE} from '../util/pages';
-import config from 'react-reveal/globals';
-import Reveal from 'react-reveal/Reveal';
+import {getPage, PAGE} from '../util/pages'; 
  
-
-config({ ssrFadeout: true });
 
 interface Props  {
   name: PAGE;
@@ -93,9 +89,7 @@ function Page({name}: Props) {
     <div>
       <Navbar />
       <NavTab /> 
-      <Reveal opposite cascade left ssrFadeout duration={1000}>
-      <Component />
-      </Reveal>
+         <Component />
       {style}
     </div>
   );
