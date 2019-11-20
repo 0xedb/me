@@ -1,6 +1,7 @@
 import Footer from './Footer'
 import Slide from 'react-reveal/Slide';
- 
+import Reveal from 'react-reveal/Reveal'; 
+
 const style = (
   <style jsx>{`
      
@@ -103,7 +104,7 @@ const css = <style>{`
 function Home() {
   return (
     <>  
-    <Slide cascade left ssrFadeout>
+    <Reveal cascade left ssrFadeout duration={1000}>
       <div id="home" className="centered min">
         <div className="intro centered min">
           <h1 className="title min">
@@ -151,7 +152,7 @@ function Home() {
         </a>
       </div>
       <Footer css={css} />
-      </Slide>
+      </Reveal>
       {style}
     </>
   );

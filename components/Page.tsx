@@ -2,6 +2,8 @@ import Navbar from './Navbar';
 import NavTab from './NavTab';
 import {getPage, PAGE} from '../util/pages';
 import config from 'react-reveal/globals';
+import Slide from 'react-reveal/Slide';
+ 
 
 config({ ssrFadeout: true });
 
@@ -34,6 +36,17 @@ const style = (
         margin: 0px;
         padding: 0px;
       }
+
+      @keyframes scale-up {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
 
       .min {
         min-width: 300px;
@@ -76,6 +89,7 @@ function Page({name}: Props) {
   const Component = getPage(name); 
 
   return (
+
     <div>
       <Navbar />
       <NavTab /> 

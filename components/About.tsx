@@ -1,4 +1,5 @@
 import Footer from './Footer'; 
+import Reveal from 'react-reveal/Reveal';
 
 const style = <style>{`
 #about {
@@ -45,16 +46,7 @@ const style = <style>{`
         animation: scale-up 1.5s ease-out infinite;
     }
 
-    @keyframes scale-up {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(3);
-            opacity: 0;
-        }
-    }
+    
 
     @media(min-width: 700px) {
         .intro-description {
@@ -104,7 +96,7 @@ const css = <style>{`
 
 function About() {
     return (
-        <> 
+        <Reveal opposite  cascade right ssrFadeout duration={5000}> 
         <div id='about' className='centered min'><h1>I'm Bruno</h1>
         <div className="intro-description centered">
         <div className='my-pic'><picture>
@@ -124,7 +116,7 @@ function About() {
         </div> 
         <Footer css={css} />
         {style}
-        </>
+        </Reveal>
     )
 }
 
