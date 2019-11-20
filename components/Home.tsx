@@ -1,4 +1,5 @@
 import Footer from './Footer'
+import Reveal from 'react-reveal/Reveal';
 
 const style = (
   <style jsx>{`
