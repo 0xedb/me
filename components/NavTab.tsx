@@ -9,10 +9,20 @@ const style = <style>{`
     background: #ffff;
     display: flex;
     justify-content: center;
+    z-index: 8;
+    padding: 17px 0;
+  }
+
+  .anticon {
+    transform: scale(1.5);
   }
 
   .home-tab {
       height: 26px;
+  }
+
+  .ant-breadcrumb  {
+    font-size: 20px;
   }
 
   `}</style>
