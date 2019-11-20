@@ -1,7 +1,9 @@
 import Navbar from './Navbar'; 
 import NavTab from './NavTab';
 import {getPage, PAGE} from '../util/pages';
+import config from 'react-reveal/globals';
 
+config({ ssrFadeout: true });
 
 interface Props  {
   name: PAGE;
