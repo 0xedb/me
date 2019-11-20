@@ -1,5 +1,6 @@
 import Footer from './Footer'; 
 import Reveal from 'react-reveal/Reveal';
+import Zoom from 'react-reveal/Zoom';
 
 const style = <style>{`
 #about {
@@ -43,7 +44,7 @@ const style = <style>{`
     .locate-outer {
         background: transparent;
         border: 1px solid gold; 
-        animation: scale-up 1.5s ease-out infinite;
+        animation: scale-up 1.5s ease-out infinite !important;
     }
 
     
@@ -96,13 +97,16 @@ const css = <style>{`
 
 function About() {
     return (
-        <Reveal opposite  cascade right ssrFadeout duration={5000}> 
+        <Reveal opposite  cascade right ssrFadeout duration={1000}> 
         <div id='about' className='centered min'><h1>I'm Bruno</h1>
         <div className="intro-description centered">
-        <div className='my-pic'><picture>
+        <div className='my-pic'>
+        <Zoom duration={3000}>
+        <picture>
         <source srcSet='/images/myself3.jpg' media="(min-width: 700px)" />
         <img src='/images/myself3_0.jpg' alt='bruno' />
-        </picture></div>
+        </picture></Zoom>
+        </div>
         <div><p>hello world</p></div>
         </div>
 <div className='locate'></div>

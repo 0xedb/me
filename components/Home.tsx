@@ -1,7 +1,10 @@
 import Footer from './Footer'
-import Slide from 'react-reveal/Slide';
+import Zoom from 'react-reveal/Zoom';
 import Reveal from 'react-reveal/Reveal'; 
+import config from 'react-reveal/globals'; 
+ 
 
+config({ ssrFadeout: true });
 const style = (
   <style jsx>{`
      
@@ -104,7 +107,7 @@ const css = <style>{`
 function Home() {
   return (
     <>  
-    <Reveal cascade left ssrFadeout duration={1000}>
+    <Reveal opposite cascade left ssrFadeout duration={1000}>
       <div id="home" className="centered min">
         <div className="intro centered min">
           <h1 className="title min">
@@ -126,14 +129,15 @@ function Home() {
           </p> 
         </div>
         <div className="myself centered">
-          <picture className="myself_img">
+        <Zoom duration={1000}><picture className="myself_img">
             <source srcSet="/images/myself1.png" media="(min-width: 700px)" />
             <img
               className="myself_img"
               src="/images/myself0.png"
               alt="bruno edoh"
             />
-          </picture>
+          </picture></Zoom>
+          
         </div>
         <div className="content">
           <h2 className="is-medium">I'm Bruno</h2>
