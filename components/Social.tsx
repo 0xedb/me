@@ -1,5 +1,9 @@
 import React, { SyntheticEvent } from 'react';
 import { notification } from 'antd';
+import Reveal from 'react-reveal/Reveal';
+import config from 'react-reveal/globals';
+
+config({ ssrFadeout: true });
 
 const style = (
   <style jsx>{`
@@ -40,29 +44,28 @@ const style = (
   `}</style>
 );
 
-const snapchat =   (
-  <div>
-    <img
-      src="/images/snapchat.jpg"
-      alt="snapchat"
-      style={{ width: '300px' }}
-    />
-  </div>
+const snapchat = (
+  <Reveal cascade duration={3000}>
+    <div>
+      <img
+        src="/images/snapchat.jpg"
+        alt="snapchat"
+        style={{ width: '300px' }}
+      />
+    </div>
+  </Reveal>
 );
 
 function Social() {
-
   const handleSnapChat = (event: SyntheticEvent) => {
     event.preventDefault();
     notification.destroy();
     notification.open({
       message: '',
       description: snapchat,
-      duration: 20
-    })
+      duration: 20,
+    });
   };
-
-  
 
   return (
     <div className="social centered">
