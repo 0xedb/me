@@ -152,7 +152,7 @@ function Home() {
           <p>
           I got interested in tech back in 5<sup>th</sup>grade when
            I first used the internet. I was so fascinated by the internet that I decided I was 
-           going to pursue a career in tech. Over a decade down the road, I'm happy my little self
+           going to pursue a career in tech. Over a decade down the road now, I'm happy my little self
            made that decision. 
            </p>
            </Reveal> 

@@ -1,12 +1,12 @@
-import Footer from './Footer'; 
+import Footer from './Footer';
 import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
-import config from 'react-reveal/globals'; 
- 
+import config from 'react-reveal/globals';
 
 config({ ssrFadeout: true });
 
-const style = <style>{`
+const style = (
+  <style>{`
 #about {
     font-family: 'Quicksand', sans-serif;
 }
@@ -15,9 +15,15 @@ const style = <style>{`
         width: 100%; 
     }
 
+    .sec_div {
+        background: wheat;
+        width: 100%; 
+        max-height: 430px;
+    }
+
     .intro-description img {
         filter: grayscale(1);
-    height: 437px;
+    height: 430px;
     width: 100%;
     object-fit: cover;
     }
@@ -25,10 +31,7 @@ const style = <style>{`
     .city {
         padding-top: 40px;
     }
-
-    .city-img {
-        height: 330px !important;
-    }
+ 
 
     
 
@@ -63,18 +66,23 @@ const style = <style>{`
             width: 100%;
         }
 
+        .sec_div {
+            height: 450px;
+            max-height: unset;
+        }
+
         .intro-description img {
-            height: 637px;
+            height: 450px; 
         }
 
         .city {
-            padding-top: 80px;
+            padding-top: 60px;
         }
 
 
         .locate {
             left: 74%;
-            top: 78%;
+            top: 95%;
             width: 24px;
             height: 24px;
         }
@@ -84,8 +92,10 @@ const style = <style>{`
         }
     }
 `}</style>
+);
 
-const css = <style>{`
+const css = (
+  <style>{`
     footer div {
         max-width: 100%;
         width: 100%;
@@ -98,37 +108,47 @@ const css = <style>{`
         }
     }
 `}</style>
+);
 
 function About() {
-    return (
-        <Reveal opposite  cascade right ssrFadeout duration={1000}> 
-        <div id='about' className='centered min'><h1>I'm Bruno</h1>
+  return (
+    <Reveal opposite cascade right ssrFadeout duration={1000}>
+      <div id="about" className="centered min">
+        <h1>Hi, I'm Bruno</h1>
         <div className="intro-description centered">
-        <div className='my-pic'>
-        <Fade left cascade duration={1000}>
-        <picture>
-        <source srcSet='/images/myself3.jpg' media="(min-width: 700px)" />
-        <img src='/images/myself3_0.jpg' alt='bruno' />
-        </picture></Fade>
+          <div className="my-pic">
+            <Fade left cascade duration={1000}>
+              <picture>
+                <source
+                  srcSet="/images/myself3.jpg"
+                  media="(min-width: 700px)"
+                />
+                <img src="/images/myself3_0.jpg" alt="bruno" />
+              </picture>
+            </Fade>
+          </div>
+          <div className="sec_div">
+            <Reveal duration={1000}>
+              <p>dafds</p>
+            </Reveal>
+          </div>
         </div>
-        <div><p>hello world</p></div>
-        </div>
-<div className='locate'></div>
-<div className='locate locate-outer'></div>
-        <section className='intro-description centered city'>
-        <div>one</div>
-        
-        <div>
-        <Fade left cascade duration={1000}><img className="city-img" src='/images/accra.png' alt='accra' /></Fade>
-        
-        </div>
+        <div className="locate" />
+        <div className="locate locate-outer" />
+        <section className="intro-description centered city">
+          <div className="sec_div">one</div>
+          <div>
+            <Fade left cascade duration={1000}>
+              <img className="city-img" src="/images/accra.png" alt="accra" />
+            </Fade>
+          </div>
         </section>
-        <section>Education</section>            
-        </div> 
-        <Footer css={css} />
-        {style}
-        </Reveal>
-    )
+        <section>Education</section>
+      </div>
+      <Footer css={css} />
+      {style}
+    </Reveal>
+  );
 }
 
-export default About
+export default About;
