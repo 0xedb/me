@@ -54,7 +54,7 @@ const style = (
     }
 
     .content {
-      background: #292929;
+      background: #000000;
       width: 100%;
       color: #fdfdfd;
       max-width: 450px;

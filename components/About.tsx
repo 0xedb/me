@@ -2,6 +2,7 @@ import Footer from './Footer';
 import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade';
 import config from 'react-reveal/globals';
+import MeSummary from './MeSummary';
 
 config({ ssrFadeout: true });
 
@@ -15,11 +16,15 @@ const style = (
         width: 100%; 
     }
 
+    .city_text {
+        color: white;
+    }
+
     .sec_div {
-        background: wheat;
+        background: #000000;
         width: 100%; 
         max-height: 430px;
-    }
+    } 
 
     .intro-description img {
         filter: grayscale(1);
@@ -129,19 +134,24 @@ function About() {
           </div>
           <div className="sec_div">
             <Reveal duration={1000}>
-              <p>dafds</p>
+              <MeSummary />
             </Reveal>
           </div>
         </div>
-        <div className="locate" />
-        <div className="locate locate-outer" />
+
         <section className="intro-description centered city">
-          <div className="sec_div">one</div>
+          <div className="sec_div city_text centered"> 
+            <h2>Accra</h2>
+            <p>I live in Ghana. I was born in the capital, 
+            Accra. I've lived virtually my entire life in Accra</p>
+          </div>
           <div>
-            <Fade left cascade duration={1000}>
+            <Fade left duration={1000}>
               <img className="city-img" src="/images/accra.png" alt="accra" />
             </Fade>
           </div>
+          <section className="locate" />
+          <section className="locate locate-outer" />
         </section>
         <section>Education</section>
       </div>
