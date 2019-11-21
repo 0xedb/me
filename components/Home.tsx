@@ -1,6 +1,6 @@
 import Footer from './Footer'
 import Fade from 'react-reveal/Fade';
-import Reveal from 'react-reveal/Reveal'; 
+import Reveal from 'react-reveal/Reveal';  
 import config from 'react-reveal/globals'; 
  
 
@@ -56,10 +56,15 @@ const style = (
     .content {
       background: #292929;
       width: 100%;
-      color: #f5f5f5;
+      color: #fdfdfd;
       max-width: 450px;
-      font-family: 'Quicksand', sans-serif;
+      font-family: 'Alata', sans-serif;
       padding: 20px;
+      font-size: 24px;
+    }
+
+    .content h2 {
+      color: #ffffff;
     }
 
     sup {
@@ -83,6 +88,7 @@ const style = (
       .content {
         width: 80%;
         max-width: 635px;
+        font-size: 30px;
       }
     }
   `}</style>
@@ -140,12 +146,16 @@ function Home() {
           
         </div>
         <div className="content">
-          <h2 className="is-medium">I'm Bruno</h2>
-          <p>Have an interesting idea/project you wanna discuss?</p>
-          God called the dry land Earth, and the man and for his wife, and they
-          become one flesh. To rule the day that you have done? The woman whom
-          you gave to be with me, she gave me fruit from the tree, and I hid
-          myself.  
+        <Reveal bottom duration={5000}>
+          <h2 className="is-medium">The Push</h2>
+          
+          <p>
+          I got interested in tech back in 5<sup>th</sup>grade when
+           I first used the internet. I was so fascinated by the internet that I decided I was 
+           going to pursue a career in tech. Over a decade down the road, I'm happy my little self
+           made that decision. 
+           </p>
+           </Reveal> 
         </div>
       </div>
       
